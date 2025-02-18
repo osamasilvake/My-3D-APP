@@ -3,7 +3,7 @@ import { OrbitControls } from "@react-three/drei";
 import { Suspense, useState } from "react";
 
 import PhoneCase from "./PhoneCase.tsx";
-import textureImage from "../assets/texture.jpg";
+import textureImage from "../assets/images/osama.jpeg";
 
 function CaseCraft() {
   const [customTexture, setCustomTexture] = useState(textureImage);
@@ -25,7 +25,7 @@ function CaseCraft() {
         style={{ position: "absolute", zIndex: 1, top: 10, left: 10 }}
       />
 
-      <Canvas camera={{ position: [0, 0, 190] }}>
+      <Canvas camera={{ position: [0, 0, 160] }}>
         <ambientLight intensity={0.5} />
         <directionalLight position={[2, 2, 2]} intensity={1} />
 
