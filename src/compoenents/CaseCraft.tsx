@@ -2,10 +2,10 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { Suspense, useState } from "react";
 
+import PhoneCase from "./PhoneCase.tsx";
 import textureImage from "../assets/texture.jpg";
-import PhoneCase from "./PhoneCase";
 
-const CaseCraft = () => {
+function CaseCraft() {
   const [customTexture, setCustomTexture] = useState(textureImage);
 
   const handleTextureUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -25,7 +25,7 @@ const CaseCraft = () => {
         style={{ position: "absolute", zIndex: 1, top: 10, left: 10 }}
       />
 
-      <Canvas camera={{ position: [0, 0, 5] }}>
+      <Canvas camera={{ position: [0, 0, 190] }}>
         <ambientLight intensity={0.5} />
         <directionalLight position={[2, 2, 2]} intensity={1} />
 
@@ -37,6 +37,6 @@ const CaseCraft = () => {
       </Canvas>
     </div>
   );
-};
+}
 
 export default CaseCraft;
