@@ -7,7 +7,7 @@ function PhoneCase({ textureURL }: { textureURL: string }) {
   const { scene } = useGLTF(iphoneCase);
 
   const texture = useTexture(textureURL);
-  texture.flipY = false;
+  // texture.flipY = false;
 
   scene.traverse((child: Object3D) => {
     if (child instanceof Mesh) {
