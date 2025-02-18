@@ -1,0 +1,17 @@
+.case-craft-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.texture-upload {
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  left: 0px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+}

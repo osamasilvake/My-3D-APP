@@ -1,9 +1,9 @@
+import { useState, Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import { Suspense, useState } from "react";
-
-import PhoneCase from "./PhoneCase.tsx";
-import textureImage from "../assets/images/osama.jpeg";
+import PhoneCase from "../PhoneCase.tsx";
+import textureImage from "../../assets/images/osama.jpeg";
+import "../case-craft/CaseCraft.css";
 
 function CaseCraft() {
   const [customTexture, setCustomTexture] = useState(textureImage);
@@ -17,12 +17,12 @@ function CaseCraft() {
   };
 
   return (
-    <div style={{ width: "100vw", height: "100vh" }}>
+    <div className="case-craft-container">
       <input
         type="file"
         onChange={handleTextureUpload}
         accept="image/*"
-        style={{ position: "absolute", zIndex: 1, top: 10, left: 10 }}
+        className="texture-upload"
       />
 
       <Canvas camera={{ position: [0, 0, 160] }}>
