@@ -7,11 +7,14 @@ function PhoneCase({ textureURL }: { textureURL: string }) {
   const { scene } = useGLTF(iphoneCase);
 
   const texture = useTexture(textureURL);
-  // texture.flipY = false;
+  texture.flipY = false;
 
   scene.traverse((child: Object3D) => {
     if (child instanceof Mesh) {
-      if (child.name === "Mesh001" || child.name === "Mesh001_1") {
+      console.log(child.name);
+
+      if (child.name === "Mesh001") {
+        // Apply to back only
         if (child.material && "map" in child.material) {
           child.material.map = texture;
           child.material.needsUpdate = true;
